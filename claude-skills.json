@@ -1,0 +1,353 @@
+{
+  "name": "claude-red",
+  "version": "0.2.0",
+  "license": "MIT",
+  "homepage": "https://github.com/SnailSploit/claude-red",
+  "categories": {
+    "active-directory": [
+      "offensive-active-directory"
+    ],
+    "ai": [
+      "offensive-ai-security"
+    ],
+    "auth": [
+      "offensive-jwt",
+      "offensive-oauth"
+    ],
+    "cloud": [
+      "offensive-cloud"
+    ],
+    "exploit-dev": [
+      "offensive-basic-exploitation",
+      "offensive-crash-analysis",
+      "offensive-exploit-dev-course",
+      "offensive-exploit-development",
+      "offensive-mitigations",
+      "offensive-toctou"
+    ],
+    "fuzzing": [
+      "offensive-bug-identification",
+      "offensive-fuzzing",
+      "offensive-fuzzing-course",
+      "offensive-vuln-classes"
+    ],
+    "infrastructure": [
+      "offensive-advanced-redteam",
+      "offensive-edr-evasion",
+      "offensive-initial-access",
+      "offensive-keylogger-arch",
+      "offensive-shellcode",
+      "offensive-windows-boundaries",
+      "offensive-windows-mitigations"
+    ],
+    "iot": [
+      "offensive-iot"
+    ],
+    "mobile": [
+      "offensive-mobile"
+    ],
+    "recon": [
+      "offensive-osint",
+      "offensive-osint-methodology"
+    ],
+    "utility": [
+      "offensive-fast-checking",
+      "offensive-reporting"
+    ],
+    "web": [
+      "offensive-business-logic",
+      "offensive-deserialization",
+      "offensive-file-upload",
+      "offensive-graphql",
+      "offensive-idor",
+      "offensive-open-redirect",
+      "offensive-parameter-pollution",
+      "offensive-race-condition",
+      "offensive-rce",
+      "offensive-request-smuggling",
+      "offensive-sqli",
+      "offensive-ssrf",
+      "offensive-ssti",
+      "offensive-waf-bypass",
+      "offensive-xss",
+      "offensive-xxe"
+    ],
+    "wireless": [
+      "offensive-wifi"
+    ]
+  },
+  "skills": [
+    {
+      "name": "offensive-active-directory",
+      "category": "active-directory",
+      "path": "Skills/active-directory/offensive-active-directory/SKILL.md",
+      "description": "Active Directory attack methodology for internal network red team engagements. Covers reconnaissance (BloodHound, PowerView, ADExplorer), credential abuse (Kerberoasting, ASREProasting, NTLM relay, LLMNR/NBT-NS poisoning), privilege escalation (ACL abuse, GPO abuse, unconstrained/constrained delegation), lateral movement (Pass-the-Hash, Pass-the-Ticket, Overpass-the-Hash, WMI/WinRM/PsExec), persistence (Golden/Silver/Diamond Tickets, DCSync, DCShadow, AdminSDHolder, Skeleton Key), forest trust attacks, ADCS abuse (ESC1-ESC15), and modern MDI/Defender for Identity evasion. Use when assessing on-prem AD, hybrid AD/Entra ID environments, or ADCS deployments."
+    },
+    {
+      "name": "offensive-ai-security",
+      "category": "ai",
+      "path": "Skills/ai/offensive-ai-security/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-jwt",
+      "category": "auth",
+      "path": "Skills/auth/offensive-jwt/SKILL.md",
+      "description": "JWT attack methodology for penetration testers. Covers algorithm confusion (alg:none, RS256→HS256), weak HMAC secret brute force, kid parameter injection (SQLi, path traversal), jku/x5u/jwk header injection, JWKS cache poisoning, JWS/JWE confusion, timing attacks, and mobile JWT storage extraction. Use when testing JWT-based authentication, hunting auth bypass via token manipulation, or evaluating JWT implementation security in web or mobile apps."
+    },
+    {
+      "name": "offensive-oauth",
+      "category": "auth",
+      "path": "Skills/auth/offensive-oauth/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-cloud",
+      "category": "cloud",
+      "path": "Skills/cloud/offensive-cloud/SKILL.md",
+      "description": "Cloud security attack methodology covering AWS, Azure, and GCP. Includes credential harvesting (IMDS, ~/.aws, env vars, leaked CI secrets, instance roles), enumeration with cloud-specific tools (pacu, ScoutSuite, Prowler, ROADtools, gcp_enum), privilege escalation paths (IAM PassRole, AssumeRole chains, Lambda/Functions privilege flips, Azure Owner-on-self, GCP serviceAccountTokenCreator), persistence techniques (IAM user/key creation, AAD app registration, GCP svc account key creation, EventBridge/Logic Apps backdoors), data exfiltration (S3/Blob/GCS, snapshot share, RDS/CosmosDB/Cloud SQL exfil), cloud-native lateral movement (cross-account assume, Azure AD multi-tenant, GCP project hierarchy), serverless attacks (Lambda env vars, layer hijack, Step Functions), Kubernetes-on-cloud (EKS/AKS/GKE-specific paths to node and AWS metadata), and CSPM evasion (CloudTrail blind spots, GuardDuty mute, Sentinel rule shaping). Use when the engagement scope is cloud accounts, when you've stolen cloud credentials, or when assessing cloud posture."
+    },
+    {
+      "name": "offensive-basic-exploitation",
+      "category": "exploit-dev",
+      "path": "Skills/exploit-dev/offensive-basic-exploitation/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-crash-analysis",
+      "category": "exploit-dev",
+      "path": "Skills/exploit-dev/offensive-crash-analysis/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-exploit-dev-course",
+      "category": "exploit-dev",
+      "path": "Skills/exploit-dev/offensive-exploit-dev-course/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-exploit-development",
+      "category": "exploit-dev",
+      "path": "Skills/exploit-dev/offensive-exploit-development/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-mitigations",
+      "category": "exploit-dev",
+      "path": "Skills/exploit-dev/offensive-mitigations/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-toctou",
+      "category": "exploit-dev",
+      "path": "Skills/exploit-dev/offensive-toctou/SKILL.md",
+      "description": "Time-of-Check / Time-of-Use (TOCTOU) race condition exploitation methodology across binary, kernel, filesystem, web, and container layers. Covers symbolic-link races (open/access/stat split), file-descriptor races, fopen/realpath traversal races, /proc and procfs races, FUSE-backed slow-fs races to widen the window, ptrace and signal races, kernel double-fetch / userspace pointer races, container/runc/symlink escape primitives, kubernetes admission/authz TOCTOU, web auth-vs-authz TOCTOU, JWT-claim TOCTOU at gateway vs service, payment/idempotency races, and modern race-amplification techniques (single-packet attack, slow loris, FUSE pause, cgroup freeze, scheduler shaping). Use when you've identified a 'check then act' pattern in code, when fuzzing for race conditions, or when exploiting concurrency bugs in privileged binaries / kernel / orchestrators."
+    },
+    {
+      "name": "offensive-bug-identification",
+      "category": "fuzzing",
+      "path": "Skills/fuzzing/offensive-bug-identification/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-fuzzing",
+      "category": "fuzzing",
+      "path": "Skills/fuzzing/offensive-fuzzing/SKILL.md",
+      "description": "Practical offensive fuzzing methodology covering target identification, fuzzer selection (AFL++, libFuzzer, Honggfuzz, Boofuzz, syzkaller), harness writing, corpus curation, mutation strategies, coverage measurement, and crash triage. Use when setting up or running fuzz campaigns against any target: file parsers, network protocols, kernel drivers, EDR engines, embedded firmware, or language runtimes."
+    },
+    {
+      "name": "offensive-fuzzing-course",
+      "category": "fuzzing",
+      "path": "Skills/fuzzing/offensive-fuzzing-course/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-vuln-classes",
+      "category": "fuzzing",
+      "path": "Skills/fuzzing/offensive-vuln-classes/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-advanced-redteam",
+      "category": "infrastructure",
+      "path": "Skills/infrastructure/offensive-advanced-redteam/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-edr-evasion",
+      "category": "infrastructure",
+      "path": "Skills/infrastructure/offensive-edr-evasion/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-initial-access",
+      "category": "infrastructure",
+      "path": "Skills/infrastructure/offensive-initial-access/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-keylogger-arch",
+      "category": "infrastructure",
+      "path": "Skills/infrastructure/offensive-keylogger-arch/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-shellcode",
+      "category": "infrastructure",
+      "path": "Skills/infrastructure/offensive-shellcode/SKILL.md",
+      "description": "Shellcode development reference for offensive security engagements. Use when writing custom x86/x64 shellcode, implementing position-independent code (PIC), building shellcode loaders, evading AV/EDR detection, or converting PE files to shellcode. Covers null byte avoidance, API hashing, encoder/decoder patterns, staged vs stageless payloads, Windows PEB traversal, and cross-platform shellcode techniques."
+    },
+    {
+      "name": "offensive-windows-boundaries",
+      "category": "infrastructure",
+      "path": "Skills/infrastructure/offensive-windows-boundaries/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-windows-mitigations",
+      "category": "infrastructure",
+      "path": "Skills/infrastructure/offensive-windows-mitigations/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-iot",
+      "category": "iot",
+      "path": "Skills/iot/offensive-iot/SKILL.md",
+      "description": "IoT and embedded device security testing methodology. Covers hardware reconnaissance (UART, JTAG, SWD, SPI flash, I2C EEPROM, eMMC chip-off), firmware acquisition (vendor portals, OTA capture, flash dump, binwalk extraction), firmware analysis (filesystem mounting, binary triage, hardcoded secrets, default credential discovery), bootloader attacks (U-Boot console, secure-boot bypass, fault injection), runtime attacks on embedded Linux/RTOS (busybox CVEs, MTD writes, /dev/mem), wireless protocol attacks (Zigbee, BLE, Z-Wave, LoRaWAN, Thread/Matter, sub-GHz), MQTT/CoAP/Modbus/BACnet/OPC-UA exploitation, mobile companion app analysis, cloud-IoT API abuse, and side-channel/glitching basics. Use for IoT pentest, smart-home assessment, ICS/OT testing, or embedded vulnerability research."
+    },
+    {
+      "name": "offensive-mobile",
+      "category": "mobile",
+      "path": "Skills/mobile/offensive-mobile/SKILL.md",
+      "description": "Mobile (Android + iOS) application penetration testing methodology. Covers static analysis (apktool/jadx for Android, class-dump/Hopper/IDA for iOS), dynamic instrumentation with Frida and Objection, SSL pinning bypass strategies, root/jailbreak detection bypass, deep-link / URL-scheme abuse, exported component attacks (Android activities, services, providers, receivers; iOS XPC, URL schemes, universal links), insecure data storage (SharedPrefs, KeyStore misuse, NSUserDefaults, Keychain ACL bypass), IPC / Intent redirection, WebView vulnerabilities (JavaScriptInterface, file:// access), Firebase/AWS/Azure misconfiguration leakage, mobile API testing, biometric/Face ID/Touch ID bypass, app-cloning and runtime patching, and mobile malware/RAT analysis primitives. Use for mobile pentest, bug bounty mobile triage, or app-store reconnaissance."
+    },
+    {
+      "name": "offensive-osint",
+      "category": "recon",
+      "path": "Skills/recon/offensive-osint/SKILL.md",
+      "description": "Comprehensive OSINT methodology skill for offensive security, red team intelligence gathering, and bug bounty reconnaissance. Covers domain recon, email harvesting, social media profiling, GitHub/code leaks, Shodan/Censys enumeration, breach data lookup, employee profiling, infrastructure mapping, cryptocurrency tracing, geospatial intelligence, and AI-assisted analysis workflows. Use when performing reconnaissance against a target domain or organization, investigating a person or entity, tracing cryptocurrency flows, geolocating images or events, or building an attack-surface map."
+    },
+    {
+      "name": "offensive-osint-methodology",
+      "category": "recon",
+      "path": "Skills/recon/offensive-osint-methodology/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-fast-checking",
+      "category": "utility",
+      "path": "Skills/utility/offensive-fast-checking/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-reporting",
+      "category": "utility",
+      "path": "Skills/utility/offensive-reporting/SKILL.md",
+      "description": "Penetration test and red team report writing methodology. Covers executive summary structuring (risk-led narrative for non-technical readers), technical finding format (title, severity, affected scope, narrative, reproduction steps, impact, remediation, references), CVSS v3.1 / v4.0 scoring with vector justification, OWASP risk rating, evidence hygiene (redacting credentials, hashing client data, time-stamping every action), screenshot and PoC artifact management, finding chain narratives, scope/limitations/assumptions documentation, retest evidence and remediation tracking, deliverable formats (PDF, DOCX, HTML, JSON for SIEM ingestion), client-customer-deliverable separation, and common report mistakes (over-CVSSing, undermining the triager, missing the 'so what'). Use at the end of an engagement when authoring a deliverable, when restructuring a draft for executive readability, or when establishing a reusable report template for a consulting practice."
+    },
+    {
+      "name": "offensive-business-logic",
+      "category": "web",
+      "path": "Skills/web/offensive-business-logic/SKILL.md",
+      "description": "Business logic vulnerability testing for web/mobile/API engagements. Covers workflow bypass, state machine violations, multi-step process abuse, price/quantity/discount manipulation, currency confusion, coupon stacking, refund/chargeback abuse, race conditions on logic boundaries, parameter tampering for hidden flows, role/tenant boundary violations, time-of-check vs use, anti-automation defeat, fraud-detection evasion, and subscription/quota abuse. Use when scoping an application after surface-level OWASP Top 10 has been covered, or when the asset is a transactional/marketplace/fintech/e-commerce/SaaS app where logic flaws produce direct financial impact."
+    },
+    {
+      "name": "offensive-deserialization",
+      "category": "web",
+      "path": "Skills/web/offensive-deserialization/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-file-upload",
+      "category": "web",
+      "path": "Skills/web/offensive-file-upload/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-graphql",
+      "category": "web",
+      "path": "Skills/web/offensive-graphql/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-idor",
+      "category": "web",
+      "path": "Skills/web/offensive-idor/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-open-redirect",
+      "category": "web",
+      "path": "Skills/web/offensive-open-redirect/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-parameter-pollution",
+      "category": "web",
+      "path": "Skills/web/offensive-parameter-pollution/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-race-condition",
+      "category": "web",
+      "path": "Skills/web/offensive-race-condition/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-rce",
+      "category": "web",
+      "path": "Skills/web/offensive-rce/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-request-smuggling",
+      "category": "web",
+      "path": "Skills/web/offensive-request-smuggling/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-sqli",
+      "category": "web",
+      "path": "Skills/web/offensive-sqli/SKILL.md",
+      "description": "SQL injection testing skill for offensive security assessments and bug bounty hunting. Covers error-based, UNION-based, boolean/time-based blind, out-of-band, second-order, NoSQL, GraphQL, WebSocket, and JSON-operator SQLi. Includes WAF bypass techniques, database-specific exploitation (MySQL, MSSQL, PostgreSQL, Oracle), cloud-native attack paths, ORM CVE tracking, and SQLmap automation. Use when performing web application SQL injection testing, database enumeration, privilege escalation via SQLi, or assessing injection vectors in APIs and modern stacks."
+    },
+    {
+      "name": "offensive-ssrf",
+      "category": "web",
+      "path": "Skills/web/offensive-ssrf/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-ssti",
+      "category": "web",
+      "path": "Skills/web/offensive-ssti/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-waf-bypass",
+      "category": "web",
+      "path": "Skills/web/offensive-waf-bypass/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-xss",
+      "category": "web",
+      "path": "Skills/web/offensive-xss/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-xxe",
+      "category": "web",
+      "path": "Skills/web/offensive-xxe/SKILL.md",
+      "description": ""
+    },
+    {
+      "name": "offensive-wifi",
+      "category": "wireless",
+      "path": "Skills/wireless/offensive-wifi/SKILL.md",
+      "description": "Wireless / 802.11 attack methodology for red team engagements and wireless security assessments. Covers monitor-mode setup, WPA/WPA2-PSK handshake capture and PMKID attacks, WPA3 SAE downgrade and Dragonblood, WPA-Enterprise (EAP) attacks (MSCHAPv2 cracking, EAP-TLS cert theft, evil-twin RADIUS), Karma / Known Beacons / Mana evil twin attacks, captive-portal phishing, KRACK and FragAttacks, WPS Pixie Dust, deauthentication and disassociation attacks, rogue AP construction (hostapd-mana), 802.1X bypass, MAC randomization defeat, BLE/Zigbee/IEEE 802.15.4 sidebands, and Wi-Fi 6/6E/7 considerations. Use when scoping wireless pentest, war-driving an estate, or testing corporate wireless segmentation."
+    }
+  ],
+  "skill_count": 45,
+  "category_count": 13
+}
